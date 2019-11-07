@@ -10,7 +10,7 @@ In this project I introduce automated ETL pipeline with Apache Airflow for Strea
 
 ## Data
 
-Sparkify's data are stored on Amazon S3
+Sparkify's data is stored on Amazon S3
 
 1.Song dataset consists of JSON files and contains metadata about a song and the artist of that song. The files are partitioned by the first three letters of each song's track ID.
 
@@ -32,4 +32,22 @@ To accomplish this task we are going to implement Airflow DAG with following tas
 
 ## Project Files
 
-- 
+.
+├── create_tables.sql
+├── dags
+|   ├── etl_dag.py
+├── plugins
+|   ├── helpers
+|       ├── sql_queries.py
+|   ├── operators
+|       ├── __init__.py
+|       ├── data_quality.py
+|       ├── load_dimension.py
+|       ├── load_fact.py
+|       ├── stage_redshift.py
+
+## Project Instructions
+
+1. Lanch Redshift cluster
+2. Configure Airflow with S3 variables, AWS credentials, Redshift cluster endpoint and DB credentials
+3. Run DAG
