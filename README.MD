@@ -32,20 +32,23 @@ To accomplish this task we are going to implement Airflow DAG with following tas
 
 ## Project Files
 
-.
-├── create_tables.sql
-├── dags
-|   ├── etl_dag.py
-├── plugins
-|   ├── helpers
-|       ├── sql_queries.py
-|   ├── operators
-|       ├── __init__.py
-|       ├── data_quality.py
-|       ├── load_dimension.py
-|       ├── load_fact.py
-|       ├── stage_redshift.py
-
+```
+\
+│   README.md
+│   create_tables.sql
+└───dags\
+│   │   etl_dag.py
+└───plugins\
+│   └───helpers\
+│       │   __init__.py
+│       │   sql_queries.py
+│   └───operators\
+│       │    __init__.py
+│       │   data_quality.py
+│       │   load_dimension.py
+│       │   load_fact.py
+│       │   stage_redshift.py
+```
 ## Project Instructions
 
 1. Lanch Redshift cluster
